@@ -1,0 +1,235 @@
+body, html {
+  margin: 0;
+}
+
+#home {
+  background: url('../../public/img/background.jpeg');
+  background-size: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lato', 'sans-serif';
+  font-weight: 900;
+  font-size: 18px;
+  margin: 0;
+  color: white;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin-left: 20%;
+}
+
+.efaGep {
+  color: white;
+}
+
+.typing {
+  color: white;
+  font-size: 25px;
+}
+
+.headertext {
+  font-family: 'Lato', 'sans-serif';
+  font-weight: 900;
+  font-size: 30px;
+  margin-left: 10px;
+  background-color: #F5F5F5;
+}
+
+.about {
+  height: 60vh;
+  align-items: center;
+  background-color: #F5F5F5;
+}
+
+.portfolio {
+  background: url('../../public/img/background2.jpg');
+  height: 100vh;
+  background-attachment: fixed;
+  font-family: 'Lato', 'sans-serif';
+  font-weight: 900;
+  font-size: 30px;
+  background-size: 100%;
+}
+
+.skills {
+  font-family: 'Lato', 'sans-serif';
+  font-weight: 900;
+  font-size: 20px;
+  background-color: #F5F5F5;
+}
+
+.librariesandframeworks {
+  font-size: 17px;
+}
+
+.contact {
+  background: url('../../public/img/background3.jpg');
+  height: 100vh;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lato', 'sans-serif';
+  font-weight: 900;
+  font-size: 18px;
+  background-size: 100%;
+}
+
+.footer {
+  height: 13vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Lato', 'sans-serif';
+  font-weight: 900;
+  font-size: 18px;
+  background-color: #212121;
+  color: white;
+}
+
+.email {
+  background-color: #F5F5F5;
+  width: 30vw;
+  height: 30vh;
+  justify-content: center;
+  align-items:center;
+  padding: 10px;
+}
+
+.emailaddress {
+  color: #0288D1;
+  transition: color .30s ease-in-out;
+}
+
+.emailaddress:hover {
+  color: #757575;
+  transition: color .30s ease-in-out;
+}
+.rightbar {
+  margin-left: 20%;
+}
+
+#sidebar {
+  height: 100vh;
+  width: 20%;
+  background-color:#EEEEEE;
+  position: fixed;
+}
+
+.sidebar-button {
+  color: black;
+  font-family: 'Lato', 'sans-serif';
+  font-weight: 900;
+  font-size: 18px;
+  padding: 5px;
+  transition: background-color .30s ease-in-out;
+  /*vendor prefixes*/
+  -moz-transition: background-color  .30s ease-in-out;
+  -webkit-transition: background-color  .30s ease-in-out;
+}
+
+.sidebar-button:hover{
+  background-color: #BDBDBD;  
+  transition: background-color .40s ease-in-out;
+  /*vendor prefixes*/
+  -moz-transition: background-color .40s ease-in-out;
+  -webkit-transition: background-color .40s ease-in-out;
+  cursor: pointer;
+}
+
+.sidebar-profile{
+  left: 0;
+  position: absolute;
+  padding-left: 5px;
+  padding-bottom: 5px;
+  bottom: 0;
+}
+
+.notFound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  font-family: 'Lato', 'sans-serif';
+  font-weight: 900;
+  font-size: 25px;
+  margin: 0;
+}
+
+.textSmall {
+  font-family: 'Lato', 'sans-serif';
+  font-weight: 900;
+  font-size: 18px;
+  margin: 0;
+}
+
+.header{
+  font-size: 50px;
+}
+
+.landing {
+  display: flex;
+}
+
+.ryana{
+  text-align: center;
+}
+
+.fa {
+  width: 20px;
+  height: 20px;  
+}
+
+.abouttext {
+  font-family: 'Lato', 'sans-serif';
+  font-weight: 900;
+  font-size: 18px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.portfolioblock {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+}
+
+.social-icons > *{
+  margin: 10px;
+  cursor: pointer;
+  color: black;
+  transition: color .30s ease-in-out;
+  /*vendor prefixes*/
+  -moz-transition: color  .30s ease-in-out;
+  -webkit-transition: color  .30s ease-in-out;
+}
+
+.social-icons > *:hover {
+  color: grey;
+  transition: color .30s ease-in-out;
+  /*vendor prefixes*/
+  -moz-transition: color  .30s ease-in-out;
+  -webkit-transition: color  .30s ease-in-out;
+}
+
+.social-icons-home > *{
+  margin: 20px;
+  cursor: pointer;
+  color: white;
+  transition: color .30s ease-in-out;
+  /*vendor prefixes*/
+  -moz-transition: color  .30s ease-in-out;
+  -webkit-transition: color  .30s ease-in-out;
+  margins-top: 5px;
+}
+
+.social-icons-home > *:hover {
+  color: grey;
+  transition: color .30s ease-in-out;
+  /*vendor prefixes*/
+  -moz-transition: color  .30s ease-in-out;
+  -webkit-transition: color  .30s ease-in-out;
+}
