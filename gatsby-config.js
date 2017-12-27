@@ -10,6 +10,5 @@ module.exports = {
         fonts: [`Lato`, `sans-serif`]
       }
     }
-  ],
-  pathPrefix: 'https://github.com/Azbo400/Azbo400.github.io'
+  ]
 }
