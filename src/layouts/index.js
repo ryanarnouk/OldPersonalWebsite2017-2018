@@ -60,7 +60,15 @@ const About = () => (
 
 const Portfolio = () => (
   <div className="rightbar portfolio"> 
-    <PortfolioBlock name="Aware"/>
+    <div>
+      <h1 className="portfolioheader">Portfolio</h1>
+      <div className="portfolioblocks">
+        <PortfolioBlock name="Aware (Coming Soon)" info={<p className="portfolioinfo">Aware is a mobile application I am currently developing using React Native. More information will come out soon as I near the completion of the project.</p>} className="firstportfolio"/>
+        <PortfolioBlock name="This Website" info={<p className="portfolioinfo">I developed this Website using React and Gatsby, a static site generator for React. You can check out the source code out <a href="https://github.com/Azbo400/Azbo400.github.io" target="_blank">here</a> on Github </p>} source={require('../../public/img/mywebsite.png')}/>
+        <PortfolioBlock name="FCC Projects" info={<p className="portfolioinfo">I have completed many of the freeCodeCamp projects. You can check out all my front-end projects on my  <a target="_blank" href="https://codepen.io/azbo400/">Codepen</a> and you can check out some of my backend projects on my <a target="_blank" href="https://github.com/Azbo400">Github</a></p>} source={require('../../public/img/codepen.png')}/>
+      </div>
+      <p className="portfolionote">**please keep in mind there is much more projects to come soon, as I am working on many different projects at the moment** </p>
+    </div>
   </div>
 );
 

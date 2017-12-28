@@ -50,6 +50,9 @@ body, html {
   font-weight: 900;
   font-size: 30px;
   background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .skills {
@@ -192,9 +195,58 @@ body, html {
 }
 
 .portfolioblock {
-  width: 20px;
-  height: 20px;
+  width: 200px;
+  height: 200px;
   background-color: white;
+  text-align: center;
+  margin: 60px;
+  transition: background-color .30s ease-in-out;
+  /*vendor prefixes*/
+  -moz-transition: background-color  .30s ease-in-out;
+  -webkit-transition: background-color  .30s ease-in-out;
+  cursor: pointer;
+}
+
+.portfolioblock:hover {
+  background-color: #E0E0E0;
+  transition: background-color .30s ease-in-out;
+  /*vendor prefixes*/
+  -moz-transition: background-color  .30s ease-in-out;
+  -webkit-transition: background-color  .30s ease-in-out;
+}
+
+.portfolionote {
+  font-size: 20px;
+  color: white;
+  bottom: 0;
+  left: 0;
+}
+
+.portfolioblocks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.portfoliotitle {
+  margin: 0;
+}
+
+.portfolioinfo {
+  font-size: 18px;
+  margin: 0;
+  font-weight: 100;
+}
+
+.portfolioimage {
+  width: 190px;
+}
+
+.portfolioheader {
+  text-align: center;
+  color: white;
+  font-size: 44px;
 }
 
 .social-icons > *{
