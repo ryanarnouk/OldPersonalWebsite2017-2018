@@ -19,7 +19,7 @@ const Sidebar = () => (
     <div className="sidebar-profile"> 
       <img></img>
       <h3 className="text">Ryan A</h3>
-      <p className="textSmall">Student/Aspiring Web Developer</p>
+      <p className="textSmall">Student/Aspiring Developer</p>
       <div className="social-icons">
         <a href="https://twitter.com/azbo400" target="_blank"><FontAwesome name="twitter"/></a>
         <a href="https://www.youtube.com/channel/UCEgc6SMmlV-H6_qCPwh_m_Q" target="_blank"><FontAwesome name="youtube" /></a>
@@ -66,6 +66,9 @@ const Portfolio = () => (
         <PortfolioBlock name="Aware (Coming Soon)" info={<p className="portfolioinfo">Aware is a mobile application I am currently developing using React Native. More information will come out soon as I near the completion of the project.</p>} className="firstportfolio"/>
         <PortfolioBlock name="This Website" info={<p className="portfolioinfo">I developed this Website using React and Gatsby, a static site generator for React. You can check out the source code out <a href="https://github.com/Azbo400/Azbo400.github.io" target="_blank">here</a> on Github </p>} source={require('../../public/img/mywebsite.png')}/>
         <PortfolioBlock name="FCC Projects" info={<p className="portfolioinfo">I have completed many of the freeCodeCamp projects. You can check out all my front-end projects on my  <a target="_blank" href="https://codepen.io/azbo400/">Codepen</a> and you can check out some of my backend projects on my <a target="_blank" href="https://github.com/Azbo400">Github</a></p>} source={require('../../public/img/codepen.png')}/>
+        <div className="secondrow">
+          <PortfolioBlock name="React Redux Authentication Boilerplate" info={<p className="portfolioinfo"> React Redux Authentication boilerplate that using Node.js on the backend to let users create accounts, login, logout, etc. <a target="_blank" href="https://github.com/Azbo400/react-redux-authentication-boilerplate">Github Link</a> </p>} source={require('../../public/img/react-redux-authentication.png')}/>
+        </div>
       </div>
       <p className="portfolionote">**please keep in mind there is much more projects to come soon, as I am working on many different projects at the moment** </p>
     </div>

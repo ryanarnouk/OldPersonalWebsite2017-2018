@@ -199,7 +199,7 @@ body, html {
   height: 200px;
   background-color: white;
   text-align: center;
-  margin: 60px;
+  margin: 30px;
   transition: background-color .30s ease-in-out;
   /*vendor prefixes*/
   -moz-transition: background-color  .30s ease-in-out;
@@ -227,7 +227,6 @@ body, html {
   align-items: center;
   justify-content: center;
 }
-
 
 .portfoliotitle {
   margin: 0;
