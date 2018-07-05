@@ -94,7 +94,7 @@ body, html {
 .email {
   background-color: #F5F5F5;
   width: 30vw;
-  height: 30vh;
+  height: 70vh;
   justify-content: center;
   align-items:center;
   padding: 10px;
@@ -283,4 +283,33 @@ body, html {
   /*vendor prefixes*/
   -moz-transition: color  .30s ease-in-out;
   -webkit-transition: color  .30s ease-in-out;
+}
+
+.message {
+  width: 95%;
+  height: 40vh;
+}
+
+input[type=text] {
+  padding: 8px 8px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+textarea {
+  padding: 8px 8px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-family: 'Lato', 'sans-serif';
+}
+
+.submitbutton {
+  background-color: grey;
+  border: none;
+  padding: 8px 12px;
+  display: inline-block;
+  font-size: 16px;
+  text-decoration: none; 
+  color: white;
+  cursor: pointer;
 }

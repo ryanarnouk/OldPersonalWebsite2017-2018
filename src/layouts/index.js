@@ -16,6 +16,7 @@ const Sidebar = () => (
     <SidebarButton name="Portfolio" element=".portfolio"/>
     <SidebarButton name="Skills" element={".skills"}/>
     <SidebarButton name="Contact" element=".contact"/>
+    <SidebarButton name="Blog" onClick={() => window.open('http://azbo400.github.io/Blog')}/>
     <div className="sidebar-profile"> 
       <img></img>
       <h3 className="text">Ryan A</h3>
@@ -66,11 +67,9 @@ const Portfolio = () => (
         <PortfolioBlock name="Aware (Coming Soon)" info={<p className="portfolioinfo">Aware is a mobile application I am currently developing using React Native. More information will come out soon as I near the completion of the project.</p>} className="firstportfolio"/>
         <PortfolioBlock name="This Website" info={<p className="portfolioinfo">I developed this Website using React and Gatsby, a static site generator for React. You can check out the source code out <a href="https://github.com/Azbo400/Azbo400.github.io" target="_blank">here</a> on Github </p>} source={require('../../public/img/mywebsite.png')}/>
         <PortfolioBlock name="FCC Projects" info={<p className="portfolioinfo">I have completed many of the freeCodeCamp projects. You can check out all my front-end projects on my  <a target="_blank" href="https://codepen.io/azbo400/">Codepen</a> and you can check out some of my backend projects on my <a target="_blank" href="https://github.com/Azbo400">Github</a></p>} source={require('../../public/img/codepen.png')}/>
-        <div className="secondrow">
-          <PortfolioBlock name="React Redux Authentication Boilerplate" info={<p className="portfolioinfo"> React Redux Authentication boilerplate that using Node.js on the backend to let users create accounts, login, logout, etc. <a target="_blank" href="https://github.com/Azbo400/react-redux-authentication-boilerplate">Github Link</a> </p>} source={require('../../public/img/react-redux-authentication.png')}/>
-        </div>
+        <PortfolioBlock name="React Redux Authentication Boilerplate" info={<p className="portfolioinfo"> React Redux Authentication boilerplate that using Node.js on the backend to let users create accounts, login, logout, etc. <a target="_blank" href="https://github.com/Azbo400/react-redux-authentication-boilerplate">Github Link</a> </p>} source={require('../../public/img/react-redux-authentication.png')}/>
       </div>
-      <p className="portfolionote">**please keep in mind there is much more projects to come soon, as I am working on many different projects at the moment** </p>
+      <p className="portfolionote">**check out my Github for more projects** </p>
     </div>
   </div>
 );
@@ -84,20 +83,93 @@ const Skills = () => (
       <li>CSS</li>
       <li>React</li>
       <li>Node JS</li>
+      <li>Python</li>
+      <li>WordPress</li>
     </ul>
     <p className="librariesandframeworks">In addition, I also know quite a few frameworks and libraries such as, gulp, react-router, redux, and much more. Every day I am getting better and learning new things. 
     </p>
   </div>
 );
 
-const Contact = () => (
-  <div className="rightbar contact">
-    <div className="email">
-      <h1>Contact:</h1>
-      <p>Feel free to contact me at <a href="mailto:azbo400@gmail.com" className="emailaddress">azbo400@gmail.com</a> incase you have any questions.</p>
-    </div>
-  </div>
-);
+class Contact extends React.Component {
+  componentDidMount() { 
+    var form_id_js = "javascript_form";
+
+    var data_js = {
+        "access_token": "yuzs9nlsfv7zmtxp1byo8i60"
+    };
+
+    function js_onSuccess() {
+        // remove this to avoid redirect
+        window.location = window.location.pathname + "?message=Email+Successfully+Sent%21&isError=0";
+    }
+
+    function js_onError(error) {
+        // remove this to avoid redirect
+        window.location = window.location.pathname + "?message=Email+could+not+be+sent.&isError=1";
+    }
+
+    var sendButton = document.getElementById("js_send");
+
+    function js_send() {
+        sendButton.value='Sending…';
+        sendButton.disabled=true;
+        var request = new XMLHttpRequest();
+        request.onreadystatechange = function() {
+            if (request.readyState == 4 && request.status == 200) {
+                js_onSuccess();
+            } else
+            if(request.readyState == 4) {
+                js_onError(request.response);
+            }
+        };
+
+        var subject = document.querySelector("#" + form_id_js + " [name='subject']").value;
+        var message = document.querySelector("#" + form_id_js + " [name='text']").value;
+        data_js['subject'] = subject;
+        data_js['text'] = message;
+        var params = toParams(data_js);
+
+        request.open("POST", "https://postmail.invotes.com/send", true);
+        request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+        request.send(params);
+
+        return false;
+    }
+
+    sendButton.onclick = js_send;
+
+    function toParams(data_js) {
+        var form_data = [];
+        for ( var key in data_js ) {
+            form_data.push(encodeURIComponent(key) + "=" + encodeURIComponent(data_js[key]));
+        }
+
+        return form_data.join("&");
+    }
+
+    var js_form = document.getElementById(form_id_js);
+    js_form.addEventListener("submit", function (e) {
+        e.preventDefault();
+    });
+  }
+
+  render() {
+    return (
+      <div className="rightbar contact">
+        <div className="email">
+          <form id="javascript_form">
+            <h1 style={{textAlign: 'center'}}>Contact</h1>
+            <input type="text" name="subject" placeholder="Subject" /> <br />
+            <textarea name="text" placeholder="Message" className="message"></textarea>
+            <input type="submit" id="js_send" value="Send" className="submitbutton"/>
+          </form>
+        </div>
+      </div>
+    );
+  }
+} 
 
 const Footer = () => (
   <div className="rightbar footer">
