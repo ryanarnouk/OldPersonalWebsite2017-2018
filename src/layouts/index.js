@@ -17,7 +17,9 @@ const Sidebar = () => (
     <SidebarButton name="Portfolio" element=".portfolio"/>
     <SidebarButton name="Skills" element={".skills"}/>
     <SidebarButton name="Contact" element=".contact"/>
-    <SidebarButton name="Blog" onClick={() => window.open('http://azbo400.github.io/Blog')}/>
+    <div className="sidebar-button" onClick={() => window.open('http://azbo400.github.io/Blog')}>
+        <p className="button-text">Blog</p>
+      </div>
     <div className="sidebar-profile"> 
       <img></img>
       <h3 className="text">Ryan A</h3>
