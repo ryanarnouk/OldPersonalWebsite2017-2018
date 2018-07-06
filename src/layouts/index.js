@@ -9,6 +9,7 @@ import 'font-awesome/css/font-awesome.css';
 import './index.css'
 import SidebarButton from '../components/SidebarButton';
 import PortfolioBlock from '../components/PortfolioBlock';
+import Blog from '../components/Blog';
 
 const Sidebar = () => (
   <div id="sidebar">
@@ -32,21 +33,24 @@ const Sidebar = () => (
 );
 
 const Home = () => (
-  <div id="home" className="rightbar">
-    <div className="ryana">
-      <h1 className="header">Ryan A</h1> 
-      <Typing className="typing">
-        <span>14 year old passionate about Web development, JavaScript, React, and Node JS</span>
-        <Typing.Delay ms={1500} />
-        <Typing.Speed ms={50} />
-        <Typing.Backspace count={47} />
-        <span>programming.</span>
-      </Typing>
-      <div className="social-icons-home">
-        <a href="https://twitter.com/azbo400" target="_blank"><FontAwesome name="twitter"/></a>
-        <a href="https://www.youtube.com/channel/UCEgc6SMmlV-H6_qCPwh_m_Q" target="_blank"><FontAwesome name="youtube" /></a>
-        <a href="https://github.com/Azbo400" target="_blank"><FontAwesome name="github" /></a>
-        <a href="https://freecodecamp.com/azbo400" target="_blank"><FontAwesome name="free-code-camp" /></a>
+  <div>
+    <Blog /> 
+    <div id="home" className="rightbar">
+      <div className="ryana">
+        <h1 className="header">Ryan A</h1> 
+        <Typing className="typing">
+          <span>14 year old passionate about Web development, JavaScript, React, and Node JS</span>
+          <Typing.Delay ms={1500} />
+          <Typing.Speed ms={50} />
+          <Typing.Backspace count={47} />
+          <span>programming.</span>
+        </Typing>
+        <div className="social-icons-home">
+          <a href="https://twitter.com/azbo400" target="_blank"><FontAwesome name="twitter"/></a>
+          <a href="https://www.youtube.com/channel/UCEgc6SMmlV-H6_qCPwh_m_Q" target="_blank"><FontAwesome name="youtube" /></a>
+          <a href="https://github.com/Azbo400" target="_blank"><FontAwesome name="github" /></a>
+          <a href="https://freecodecamp.com/azbo400" target="_blank"><FontAwesome name="free-code-camp" /></a>
+        </div>
       </div>
     </div>
   </div>

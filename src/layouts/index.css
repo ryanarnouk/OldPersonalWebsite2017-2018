@@ -17,6 +17,7 @@ body, html {
   background-attachment: fixed;
   background-repeat: no-repeat;
   margin-left: 20%;
+  background-size: cover;
 }
 
 .efaGep {
@@ -313,3 +314,20 @@ textarea {
   color: white;
   cursor: pointer;
 }
+
+.blog {
+  margin-left: 20%;
+  padding: 10px;
+  font-family: 'Lato', 'sans-serif';
+  background-color: #4667FF;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.exit {
+  right: 0; 
+  position: absolute;
+  cursor: pointer;
+}
+
