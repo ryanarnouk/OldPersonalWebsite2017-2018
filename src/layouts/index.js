@@ -25,7 +25,7 @@ const Sidebar = () => (
       <h3 className="text">Ryan A</h3>
       <p className="textSmall">Student/Web Developer</p>
       <div className="social-icons">
-        <a href="https://twitter.com/azbo400" target="_blank"><FontAwesome name="twitter"/></a>
+        <a href="https://twitter.com/ryanarnoukk" target="_blank"><FontAwesome name="twitter"/></a>
         <a href="https://www.youtube.com/channel/UCEgc6SMmlV-H6_qCPwh_m_Q" target="_blank"><FontAwesome name="youtube" /></a>
         <a href="https://github.com/Azbo400" target="_blank"><FontAwesome name="github" /></a>
         <a href="https://freecodecamp.com/azbo400" target="_blank"><FontAwesome name="free-code-camp" /></a>
@@ -102,7 +102,7 @@ class Contact extends React.Component {
     var form_id_js = "javascript_form";
 
     var data_js = {
-        "access_token": "yuzs9nlsfv7zmtxp1byo8i60"
+        "access_token": "ddz8u81ne6hej3542o04tpr3"
     };
 
     function js_onSuccess() {
