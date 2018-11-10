@@ -23,7 +23,7 @@ const Sidebar = () => (
     <div className="sidebar-profile"> 
       <img></img>
       <h3 className="text">Ryan A</h3>
-      <p className="textSmall">Student/Aspiring Developer</p>
+      <p className="textSmall">Student/Web Developer</p>
       <div className="social-icons">
         <a href="https://twitter.com/azbo400" target="_blank"><FontAwesome name="twitter"/></a>
         <a href="https://www.youtube.com/channel/UCEgc6SMmlV-H6_qCPwh_m_Q" target="_blank"><FontAwesome name="youtube" /></a>
@@ -41,7 +41,7 @@ const Home = () => (
       <div className="ryana">
         <h1 className="header">Ryan A</h1> 
         <Typing className="typing">
-          <span>14 year old passionate about Web development, JavaScript, React, and Node JS</span>
+          <span>15 year old passionate about Web development, JavaScript, React, and Node JS</span>
           <Typing.Delay ms={1500} />
           <Typing.Speed ms={50} />
           <Typing.Backspace count={47} />
@@ -61,7 +61,7 @@ const Home = () => (
 const About = () => (
   <div className="rightbar about">
     <h1 className="headertext">About</h1>
-    <p className="abouttext">Hello there, my name is Ryan and I am a 14 year old boy who loves programming. In specific, I enjoy web development and JavaScript. For the past few years I have been fascinated with programming and technology. Along with web development I also enjoy working with other technologies such as mobile app development with React Native. I love building things and publishing those apps to the world. While I am not programming, I am probably at school, or doing homework</p>
+    <p className="abouttext">Hello there, my name is Ryan and I am a 15 year old boy who loves programming. In specific, I enjoy web development and JavaScript. For the past few years I have been fascinated with programming and technology. Along with web development I also enjoy working with other technologies such as mobile app development with React Native. I love building things and publishing those apps to the world. While I am not programming, I am probably at school, or doing homework</p>
   </div>
 );
 
