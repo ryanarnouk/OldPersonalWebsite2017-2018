@@ -10,6 +10,7 @@ import './index.css'
 import SidebarButton from '../components/SidebarButton';
 import PortfolioBlock from '../components/PortfolioBlock';
 import Blog from '../components/Blog';
+import favicon from '../../personallogo.png';
 
 const Sidebar = () => (
   <div id="sidebar">
@@ -29,6 +30,7 @@ const Sidebar = () => (
         <a href="https://www.youtube.com/channel/UCEgc6SMmlV-H6_qCPwh_m_Q" target="_blank"><FontAwesome name="youtube" /></a>
         <a href="https://github.com/Azbo400" target="_blank"><FontAwesome name="github" /></a>
         <a href="https://freecodecamp.com/azbo400" target="_blank"><FontAwesome name="free-code-camp" /></a>
+        <a href="https://instagram.com/ryanarnouk" target="_blank"><FontAwesome name="instagram" /></a>
       </div>
     </div>
   </div>
@@ -39,7 +41,8 @@ const Home = () => (
     <Blog /> 
     <div id="home" className="rightbar">
       <div className="ryana">
-        <h1 className="header">Ryan A</h1> 
+        <img src={favicon} style={{ width: 170, height: 170}}></img>
+
         <Typing className="typing">
           <span>15 year old passionate about Web development, JavaScript, React, and Node JS</span>
           <Typing.Delay ms={1500} />
@@ -52,6 +55,7 @@ const Home = () => (
           <a href="https://www.youtube.com/channel/UCEgc6SMmlV-H6_qCPwh_m_Q" target="_blank"><FontAwesome name="youtube" /></a>
           <a href="https://github.com/Azbo400" target="_blank"><FontAwesome name="github" /></a>
           <a href="https://freecodecamp.com/azbo400" target="_blank"><FontAwesome name="free-code-camp" /></a>
+          <a href="https://instagram.com/ryanarnouk" target="_blank"><FontAwesome name="instagram" /></a>
         </div>
       </div>
     </div>
@@ -61,7 +65,8 @@ const Home = () => (
 const About = () => (
   <div className="rightbar about">
     <h1 className="headertext">About</h1>
-    <p className="abouttext">Hello there, my name is Ryan and I am a 15 year old boy who loves programming. In specific, I enjoy web development and JavaScript. For the past few years I have been fascinated with programming and technology. Along with web development I also enjoy working with other technologies such as mobile app development with React Native. I love building things and publishing those apps to the world. While I am not programming, I am probably at school, or doing homework</p>
+    <p className="abouttext">
+    Hello, welcome to my personal website. My name is Ryan and I am a 15 year old high school student who enjoys programming. Specializing in web development and Javascript, I have been developing apps and websites for 3/4 years. While not working on web development tasks I enjoy mobile app development using technologies like React Native. In addition, I program a lot in languages like Python doing data science taks as well as machine learning a field I am very passionate about. Currently, I am working on a web app that harnesses modern technologies to teach beginners about the ever growing world of machine learning. While not programming, I am probably at school or doing homework.</p>
   </div>
 );
 
@@ -70,12 +75,13 @@ const Portfolio = () => (
     <div>
       <h1 className="portfolioheader">Portfolio</h1>
       <div className="portfolioblocks">
-        <PortfolioBlock name="Aware (Coming Soon)" info={<p className="portfolioinfo">Aware is a mobile application I am currently developing using React Native. More information will come out soon as I near the completion of the project.</p>} className="firstportfolio"/>
         <PortfolioBlock name="This Website" info={<p className="portfolioinfo">I developed this Website using React and Gatsby, a static site generator for React. You can check out the source code out <a href="https://github.com/Azbo400/Azbo400.github.io" target="_blank">here</a> on Github </p>} source={require('../../public/img/mywebsite.png')}/>
         <PortfolioBlock name="FCC Projects" info={<p className="portfolioinfo">I have completed many of the freeCodeCamp projects. You can check out all my front-end projects on my  <a target="_blank" href="https://codepen.io/azbo400/">Codepen</a> and you can check out some of my backend projects on my <a target="_blank" href="https://github.com/Azbo400">Github</a></p>} source={require('../../public/img/codepen.png')}/>
         <PortfolioBlock name="React Redux Authentication Boilerplate" info={<p className="portfolioinfo"> React Redux Authentication boilerplate that using Node.js on the backend to let users create accounts, login, logout, etc. <a target="_blank" href="https://github.com/Azbo400/react-redux-authentication-boilerplate">Github Link</a> </p>} source={require('../../public/img/react-redux-authentication.png')}/>
+        <PortfolioBlock name="Discover Machine Learning (Coming Soon)" info={<p className="portfolioinfo" style={{fontSize: '0.5em'}}>Discover Machine Learning is an web app aimed toward beginners lacking a computer science background. The focus is to introduce people to the ever growing and important world of machine learning and introduce concepts used by things like self driving cars. </p>} source={require('../../public/img/favicon.png')} styling={{width: 130}}/>
+        <div className="linebreak"></div>
+        <PortfolioBlock name="And More!" info={<p className="portfolioinfo" style={{fontSize: '0.5em'}}>I don't always  have time to put all my projects on my website, so be sure to check out my <a target="_blank" href="https://github.com/Azbo400">Github </a> to see more of my projects</p>} source={require('../../public/img/github.png')} styling={{width: 160}}/>
       </div>
-      <p className="portfolionote">**check out my Github for more projects** </p>
     </div>
   </div>
 );
@@ -91,6 +97,8 @@ const Skills = () => (
       <li>Node JS</li>
       <li>Python</li>
       <li>WordPress</li>
+      <li>React Native</li>
+      <li>Redux</li>
     </ul>
     <p className="librariesandframeworks">In addition, I also know quite a few frameworks and libraries such as, gulp, react-router, redux, and much more. Every day I am getting better and learning new things. 
     </p>
@@ -165,8 +173,10 @@ class Contact extends React.Component {
     return (
       <div className="rightbar contact">
         <div className="email">
-          <form id="javascript_form">
+          <form id="javascript_form" style={{margin: 20}}>
             <h1 style={{textAlign: 'center'}}>Contact</h1>
+            <p>The easiest way to get in contact with me.</p>
+            <p>Please put your email to allow me to get back with you</p>
             <input type="text" name="subject" placeholder="Subject" /> <br />
             <textarea name="text" placeholder="Message" className="message"></textarea>
             <input type="submit" id="js_send" value="Send" className="submitbutton"/>
@@ -179,7 +189,7 @@ class Contact extends React.Component {
 
 const Footer = () => (
   <div className="rightbar footer">
-    <p>Developed by Ryan A 2017/2018</p>
+    <p>Developed by Ryan A 2017-2019</p>
   </div>
 );
 
@@ -190,6 +200,9 @@ const TemplateWrapper = ({ children }) => (
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
+      ]}
+      link={[
+        { rel: 'shortcut icon', type: 'image/png', href: `${favicon}`}
       ]}
     />
     <Sidebar />

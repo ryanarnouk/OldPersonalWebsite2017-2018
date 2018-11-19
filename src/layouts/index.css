@@ -95,7 +95,7 @@ body, html {
 .email {
   background-color: #F5F5F5;
   width: 30vw;
-  height: 70vh;
+  height: 90vh;
   justify-content: center;
   align-items:center;
   padding: 10px;
@@ -209,11 +209,15 @@ body, html {
 }
 
 .portfolioblock:hover {
-  background-color: #E0E0E0;
+  background-color: rgb(240, 240, 240);
   transition: background-color .30s ease-in-out;
   /*vendor prefixes*/
   -moz-transition: background-color  .30s ease-in-out;
   -webkit-transition: background-color  .30s ease-in-out;
+}
+
+.linebreak {
+  width: 100%;
 }
 
 .portfolionote {
@@ -227,6 +231,7 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-flow: row wrap;
 }
 
 .portfoliotitle {

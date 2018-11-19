@@ -16,8 +16,8 @@ class PortfolioBlock extends Component {
           {this.props.info}
         </Fade>:
         <div>
-          <p className="portfoliotitle">{this.props.name}</p>
-          <img src={this.props.source} className="portfolioimage"/>
+          <p className="portfoliotitle" style={{fontSize: '0.7em'}}>{this.props.name}</p>
+          <img src={this.props.source} className="portfolioimage" style={this.props.styling}/>
         </div>
         }
       </div>
