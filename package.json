@@ -11,6 +11,7 @@
     "gatsby-plugin-react-helmet": "^1.0.8",
     "react-fade": "^1.1.1",
     "react-fontawesome": "^1.6.1",
+    "react-media": "^1.8.0",
     "react-typing-animation": "^1.1.5",
     "scroll-to": "0.0.2",
     "scroll-to-element": "^2.0.0",
